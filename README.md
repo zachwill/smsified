@@ -8,7 +8,7 @@ Installation
 ------------
 
 ```
-pip install pets
+pip install smsified
 ```
 
 
