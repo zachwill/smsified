@@ -1,7 +1,7 @@
 smsified
 ========
 
-An easy-to-use Python wrapper for SMSified.
+An easy-to-use Python wrapper for [SMSified](https://smsified.com/).
 
 
 Installation
@@ -15,7 +15,8 @@ pip install smsified
 Usage
 -----
 
-Make sure to set the following environment variables.
+Make sure to set the following environment variables to reduce
+the preliminary, boilerplate setup.
 
 ```
 export SMS_USER=smsified_username
@@ -33,10 +34,10 @@ You can then import the `smsified` Python library.
 # Now, set your current SMSified number.
 >>> s.number('415-123-4567')
 
-# Send a message.
+# Send a message to 415-456-7890.
 >>> s.send('Hey, you!', '415-456-7890')
 
-# We can switch it up at any time.
+# And, we can switch it up at any time.
 >>> s.number('415-456-7890')
 >>> s.send('ohai', '415-123-4567')
 ```
