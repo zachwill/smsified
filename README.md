@@ -34,10 +34,10 @@ You can then import the `smsified` Python library.
 # Now, set your current SMSified number.
 >>> s.number('415-123-4567')
 
-# Send a message to 415-456-7890.
->>> s.send('Hey, you!', '415-456-7890')
+# Send a message.
+>>> s.send('415-456-7890', 'Hey, you!')
 
 # And, we can switch it up at any time.
 >>> s.number('415-456-7890')
->>> s.send('ohai', '415-123-4567')
+>>> s.send('415-123-4567', 'ohai')
 ```

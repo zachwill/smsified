@@ -38,15 +38,15 @@ def receive(data):
     return text
 
 
-def send(message, to, **params):
+def send(to, message, **params):
     """Send an SMS message."""
     authentication = auth()
     number = os.environ.get('SMSIFIED_NUMBER', '')
     if 'callback' in params:
         callback = params.pop('callback')
         params['notifyURL'] = callback
-    params['message'] = message
     params['address'] = to
+    params['message'] = message
     endpoint = '/'.join((URL, 'outbound', number, 'requests'))
     response = req.post(endpoint, auth=authentication, params=params)
     return response
