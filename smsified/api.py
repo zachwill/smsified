@@ -33,7 +33,8 @@ def number(phone_number):
 
 def receive(data):
     """Process an incoming text message."""
-    data = json.loads(data)
+    if isinstance(data, str):
+        data = json.loads(data)
     text = data['inboundSMSMessageNotification']['inboundSMSMessage']
     return text
 
