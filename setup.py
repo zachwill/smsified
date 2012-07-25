@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name="smsified",
-    version="0.2",
+    version="0.2.1",
     description="An easy-to-use wrapper for SMSified.",
     author="Zach Williams",
     author_email="hey@zachwill.com",
